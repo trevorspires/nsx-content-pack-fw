@@ -1,0 +1,472 @@
+{
+  "name":"vRLI Dashboard 1",
+  "namespace":"vmw.nsxt.logging",
+  "contentPackId":"vmw.nsxt.logging",
+  "framework":"#9c4",
+  "version":"2.4",
+  "extractedFields":[ {
+    "displayName":"nsx_idps_action",
+    "preContext":"action\":\"",
+    "postContext":"\"\\,\"gid",
+    "regexValue":"\\w+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mfrxi2lpny000000",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"nsx_idps_bytes_toserver",
+    "preContext":"bytes_toserver\":",
+    "postContext":"\\,\"bytes_toclient",
+    "regexValue":"-?\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mj4xizltl52g643foj3gk4q0",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"nsx_idps_dst_ip",
+    "preContext":"dest_ip\":\"",
+    "postContext":"\"\\,\"dest_port",
+    "regexValue":"\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mrzxix3joa000000",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"nsx_idps_dst_port",
+    "preContext":"dest_port\":",
+    "postContext":"\\,\"proto",
+    "regexValue":"-?\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mrzxix3qn5zhi000",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"nsx_idps_proto",
+    "preContext":"proto\":\"",
+    "postContext":"\"\\,\"nsx_metadata",
+    "regexValue":"\\w+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427obzg65dp",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"nsx_idps_signature_id",
+    "preContext":"signature_id\":",
+    "postContext":"\\,\"rev",
+    "regexValue":"-?\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onuwo3tbor2xezk7nfsa0000",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"nsx_idps_src_ip",
+    "preContext":"src_ip\":\"",
+    "postContext":"\"\\,\"src_port",
+    "regexValue":"\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onzggx3joa000000",
+    "constraints":null,
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_audit_operation_status",
+    "preContext":"status(?::'|=\")",
+    "postContext":"(?:'|\")",
+    "regexValue":"\\w+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000",
+    "constraints":"{\"searchTerms\":\"comp subcomp\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_comp",
+    "preContext":"comp=\"",
+    "postContext":"\"",
+    "regexValue":"\\S+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0",
+    "constraints":"{\"searchTerms\":\"subcomp\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_entid",
+    "preContext":"entId=\"",
+    "postContext":"\"",
+    "regexValue":"\\S+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le",
+    "constraints":"{\"searchTerms\":\"NSX comp subcomp\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_action",
+    "preContext":"match ",
+    "postContext":" ",
+    "regexValue":"\\w+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_client_to_server_bytes",
+    "preContext":" ",
+    "postContext":"/\\d+[ ]*$",
+    "regexValue":"-?\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_dst",
+    "preContext":"\\d+->",
+    "postContext":"(?: |/|$)",
+    "regexValue":"[A-Fa-f\\d\\.:]+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_dst_ip_port",
+    "preContext":"\\d+->",
+    "postContext":"(?: |$)",
+    "regexValue":"[A-Fa-f\\d\\.:]+/\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_dst_port",
+    "preContext":"\\d+->[A-Fa-f\\d\\.:]+/",
+    "postContext":"(?: |$)",
+    "regexValue":"-?\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_protocol",
+    "preContext":"(?:IN|OUT) (\\d+ )?",
+    "postContext":"\\s",
+    "regexValue":"(?:TCP6?|UDP6?|ICMP|PROTO6? \\d+)",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3qojxxi33dn5wa0000",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_server_to_client_bytes",
+    "preContext":" \\d+/",
+    "postContext":"[ ]*$",
+    "regexValue":"-?\\d+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_firewall_src",
+    "preContext":"\\S+\\s+",
+    "postContext":"(?:/|->)",
+    "regexValue":"[A-Fa-f\\d\\.:]+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000",
+    "constraints":"{\"searchTerms\":\"INET\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_operation",
+    "preContext":"Operation(?::'|=\")",
+    "postContext":"(?:'|\")",
+    "regexValue":"\\w+",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0",
+    "constraints":"{\"searchTerms\":\"comp subcomp\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_user",
+    "preContext":"UserName(?::'|=\")",
+    "postContext":"(?:'|\")",
+    "regexValue":".+?",
+    "internalName":"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0",
+    "constraints":"{\"searchTerms\":\"comp subcomp\"}",
+    "info":null
+  } ],
+  "queries":[ ],
+  "alerts":[ {
+    "name":"finance_patchinfra",
+    "info":"finance user makes a change",
+    "alertType":"RATE_BASED",
+    "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611428537562,\"endTimeMillis\":1611428849368,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"UserName=financeuser@corp.local\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"patchinfra\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+    "messageQuery":"",
+    "hitCount":0.0,
+    "hitOperator":"GREATER_THAN",
+    "searchPeriod":300000,
+    "searchInterval":300000
+  }, {
+    "name":"NSX_Patch_Infra",
+    "alertType":"RATE_BASED",
+    "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611498209972,\"endTimeMillis\":1611498509971,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"UserName=financeuser@corp.local\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"patchinfra\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+    "messageQuery":"",
+    "hitCount":0.0,
+    "hitOperator":"GREATER_THAN",
+    "searchPeriod":300000,
+    "searchInterval":300000
+  }, {
+    "name":"NSX_IPS_Event",
+    "alertType":"RATE_BASED",
+    "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611500732093,\"endTimeMillis\":1611501043126,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"idp_protect 4147\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+    "messageQuery":null,
+    "hitCount":0.0,
+    "hitOperator":"GREATER_THAN",
+    "searchPeriod":300000,
+    "searchInterval":300000
+  } ],
+  "dashboardSections":[ {
+    "views":[ {
+      "name":"Dashboard 1",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"Total Events",
+          "info":"The total number of events received over time.",
+          "chartType":null,
+          "chartOptions":"{\"doublegroupbymultiseries\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":0,\"endTimeMillis\":0,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"3-tier client access",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"match PASS 3-tier client access\",\"startTimeMillis\":1589480269544,\"endTimeMillis\":1589480570672,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"3-tier app to db access",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"match PASS app to db access\",\"startTimeMillis\":1589480375132,\"endTimeMillis\":1589480676652,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"3-tier web to app access",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"match PASS web to app access\",\"startTimeMillis\":1589480460476,\"endTimeMillis\":1589480761978,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"3-tier catch all",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"match PASS 3-tier catch all\",\"startTimeMillis\":1589480619151,\"endTimeMillis\":1589480920156,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      } ]
+    }, {
+      "name":"NSX - Audit - Dashboard",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"Logical Switch Audits (policy)",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"fourranges\":{\"ranges\":[\"\",\"\",\"\",\"\"]}}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"comp\",\"startTimeMillis\":1611335575802,\"endTimeMillis\":1611506764482,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"FIELD_TABLE\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"appname\",\"operator\":\"CONTAINS\",\"value\":\"NSX\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"operator\":\"CONTAINS\",\"value\":\"nsx-manager\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"DeleteInfraSegment,CreateOrReplaceInfraSegment\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"operator\":\"CONTAINS\",\"value\":\"success\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_audit_operation_status\",\"preContext\":\"status(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_comp\",\"preContext\":\"comp=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"Logical Switch Audit Details (policy)",
+          "info":"",
+          "chartType":"number",
+          "chartOptions":"{\"logaxis\":false,\"legend\":true,\"stacking\":\"normal\",\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"comp\",\"startTimeMillis\":1611335575802,\"endTimeMillis\":1611503743914,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"appname\",\"operator\":\"CONTAINS\",\"value\":\"NSX\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"operator\":\"CONTAINS\",\"value\":\"nsx-manager\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"CreateOrReplaceInfraSegment,DeleteInfraSegment\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"operator\":\"CONTAINS\",\"value\":\"success\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_user\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_operation\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_entid\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_audit_operation_status\",\"preContext\":\"status(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_comp\",\"preContext\":\"comp=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_entid\",\"preContext\":\"entId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le\",\"constraints\":\"{\\\"searchTerms\\\":\\\"NSX comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_user\",\"preContext\":\"UserName(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\".+?\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Firewall Audits (policy)",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"fourranges\":{\"ranges\":[\"\",\"\",\"\",\"\"]}}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"comp\",\"startTimeMillis\":1611502345573,\"endTimeMillis\":1611505957251,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"appname\",\"operator\":\"CONTAINS\",\"value\":\"NSX\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"operator\":\"CONTAINS\",\"value\":\"nsx-manager\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"DeleteSecurityPolicyForDomain,PatchSecurityPolicyForDomain\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"operator\":\"CONTAINS\",\"value\":\"success\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_audit_operation_status\",\"preContext\":\"status(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_comp\",\"preContext\":\"comp=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"Firewall Audit Details (policy)",
+          "info":"",
+          "chartType":"number",
+          "chartOptions":"{\"logaxis\":false,\"legend\":true,\"stacking\":\"normal\",\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"comp\",\"startTimeMillis\":1611335575802,\"endTimeMillis\":1611506439310,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"appname\",\"operator\":\"CONTAINS\",\"value\":\"NSX\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"operator\":\"CONTAINS\",\"value\":\"nsx-manager\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"DeleteSecurityRule,UpdateSecurityRule,PatchSecurityPolicyForDomain,DeleteSecurityPolicyForDomain\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"operator\":\"CONTAINS\",\"value\":\"success\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_user\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_operation\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_entid\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_audit_operation_status\",\"preContext\":\"status(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_comp\",\"preContext\":\"comp=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_entid\",\"preContext\":\"entId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mvxhi2le\",\"constraints\":\"{\\\"searchTerms\\\":\\\"NSX comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_user\",\"preContext\":\"UserName(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\".+?\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"IDPS Audits (policy)",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":null,
+          "chartOptions":"{\"fourranges\":{\"ranges\":[\"\",\"\",\"\",\"\"]}}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"comp\",\"startTimeMillis\":1611506865094,\"endTimeMillis\":1611507176548,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"appname\",\"operator\":\"CONTAINS\",\"value\":\"NSX\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"operator\":\"CONTAINS\",\"value\":\"nsx-manager\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"PatchIdsSecurityPolicy,PatchIdsRule,DeleteIdsRule,DeleteIdsSecurityPolicy\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"operator\":\"CONTAINS\",\"value\":\"success\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_audit_operation_status\",\"preContext\":\"status(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_comp\",\"preContext\":\"comp=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"IDPS Audit Details (policy)",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":"number",
+          "chartOptions":"{\"logaxis\":false,\"legend\":true,\"stacking\":\"normal\",\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"comp\",\"startTimeMillis\":1611335575802,\"endTimeMillis\":1611507616860,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"FIELD_TABLE\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"appname\",\"operator\":\"CONTAINS\",\"value\":\"NSX\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"operator\":\"CONTAINS\",\"value\":\"nsx-manager\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"operator\":\"CONTAINS\",\"value\":\"DeleteIdsSecurityPolicy,DeleteIdsRule,PatchIdsRule,PatchIdsSecurityPolicy\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"operator\":\"CONTAINS\",\"value\":\"success\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_user\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_operation\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_audit_operation_status\",\"preContext\":\"status(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mf2wi2lul5xxazlsmf2gs33ol5zxiyluovzq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_comp\",\"preContext\":\"comp=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mnxw24a0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_operation\",\"preContext\":\"Operation(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7n5ygk4tboruw63q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"},{\"displayName\":\"vmw_nsxt_user\",\"preContext\":\"UserName(?::'|=\\\")\",\"postContext\":\"(?:'|\\\")\",\"regexValue\":\".+?\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7ovzwk4q0\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      } ]
+    }, {
+      "name":"NSX - DFW - Traffic",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"Top Firewall Sources",
+          "info":"Top source IP addresses from all firewall rules that are logging data.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"INET\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o\",\"operator\":\"CONTAINS\",\"value\":\"pass\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_src\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_action\",\"preContext\":\"match \",\"postContext\":\" \",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_src\",\"preContext\":\"\\\\S+\\\\s+\",\"postContext\":\"(?:/|->)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"Top Firewall Destinations",
+          "info":"Top destination IP addresses from all firewall rules that are logging data.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"INET\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o\",\"operator\":\"CONTAINS\",\"value\":\"pass\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_action\",\"preContext\":\"match \",\"postContext\":\" \",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |/|$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Application Ports Permitted",
+          "info":"Measures all in / out connections permitted in the NSX-T environment by destination port.<br><br>The data is the summation of the specified time range.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\\\"inet term\\\"\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst_port\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"preContext\":\" \",\"postContext\":\"/\\\\d+[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst_ip_port\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+/\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst_port\",\"preContext\":\"\\\\d+->[A-Fa-f\\\\d\\\\.:]+/\",\"postContext\":\"(?: |$)\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"Application Ports Denied",
+          "info":"All traffic deined by a firewall rule.  Data is grouped by application (or destination) port number.  This widget displays only data associated with a port. Traffic types, such as ICMP, without an associated port are not displayed.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"INET\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"drop, reject\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"inet match\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst_port\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst_ip_port\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+/\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst_port\",\"preContext\":\"\\\\d+->[A-Fa-f\\\\d\\\\.:]+/\",\"postContext\":\"(?: |$)\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Top Firewall Sources by bytes - client to server",
+          "info":"All firewall traffic, in bytes by source IP address, from the client to a server. &nbsp;Data is only displayed if the firewall is logging its data.<br><br>The data is the summation of the specified time range.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"bar",
+          "chartOptions":"{}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"INET\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true}],\"field\":{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"displayNamespace\":\"Unknown\"}}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true},\"piqlFunctionField\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"inet term\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_src\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"preContext\":\" \",\"postContext\":\"/\\\\d+[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst_ip_port\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+/\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_src\",\"preContext\":\"\\\\S+\\\\s+\",\"postContext\":\"(?:/|->)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"Top Firewall Destinations by bytes - client to server",
+          "info":"All firewall traffic, in bytes by destination IP address, from the client to a server. &nbsp;Data is only displayed if the firewall is logging its data.<br><br>The data is the summation of the specified time range.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"bar",
+          "chartOptions":"{}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"INET\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true}],\"field\":{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"displayNamespace\":\"Unknown\"}}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true},\"piqlFunctionField\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"inet term\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"preContext\":\" \",\"postContext\":\"/\\\\d+[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |/|$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Top Firewall Sources by bytes - server to client",
+          "info":"All firewall traffic, in bytes by source IP address, from the server to a client. &nbsp;Data is only displayed if the firewall is logging its data.<br><br>The data is the summation of the specified time range.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"bar",
+          "chartOptions":"{}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\\\"inet term\\\"\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true}],\"field\":{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"displayName\":\"vmw_nsxt_firewall_server_to_client_bytes\",\"displayNamespace\":\"Unknown\"}}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true},\"piqlFunctionField\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_src\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"preContext\":\" \",\"postContext\":\"/\\\\d+[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst_ip_port\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+/\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f62lql5yg64tu\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_server_to_client_bytes\",\"preContext\":\" \\\\d+/\",\"postContext\":\"[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_src\",\"preContext\":\"\\\\S+\\\\s+\",\"postContext\":\"(?:/|->)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"Top Firewall Destinations by bytes - server to client",
+          "info":"All firewall traffic, in bytes by destination IP address, from the server to a client. &nbsp;Data is only displayed if the firewall is logging its data.<br><br>The data is the summation of the specified time range.<br><br>Note that distributed firewall rule logging is disabled by default and will need to be enabled in order to have data shown in this widget.",
+          "gridWidth":"1/2",
+          "chartType":"bar",
+          "chartOptions":"{}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\\\"inet term\\\"\",\"startTimeMillis\":-9223372036854775808,\"endTimeMillis\":9223372036854775807,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true}],\"field\":{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"displayName\":\"vmw_nsxt_firewall_server_to_client_bytes\",\"displayNamespace\":\"Unknown\"}}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Sum\",\"value\":\"SUM\",\"requiresField\":true,\"numericOnly\":true},\"piqlFunctionField\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"fieldConstraints\":[{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_client_to_server_bytes\",\"preContext\":\" \",\"postContext\":\"/\\\\d+[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3dnruwk3tul52g6x3tmvzhmzlsl5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |/|$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_server_to_client_bytes\",\"preContext\":\" \\\\d+/\",\"postContext\":\"[ ]*$\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tmvzhmzlsl52g6x3dnruwk3tul5rhs5dfom000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      } ]
+    }, {
+      "name":"NSX - IDPS - Traffic",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"Top IDPS Source",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piepercentage\":false,\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611521087719,\"endTimeMillis\":1611524690009,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffzxhg6duozwxox3oon4hix3gnfzgk53bnrwf6yldoruw63q0\",\"operator\":\"CONTAINS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onzggx3joa000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"idps_evt\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"nsx_idps_src_ip\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onzggx3joa000000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"nsx_idps_src_ip\",\"preContext\":\"src_ip\\\":\\\"\",\"postContext\":\"\\\"\\\\,\\\"src_port\",\"regexValue\":\"\\\\d{1,3}\\\\.\\\\d{1,3}\\\\.\\\\d{1,3}\\\\.\\\\d{1,3}\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onzggx3joa000000\",\"constraints\":null}]}",
+          "messageQuery":""
+        }, {
+          "name":"Top IDPS Dest",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piepercentage\":false,\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611521144231,\"endTimeMillis\":1611524755134,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffzxhg6duozwxox3oon4hix3gnfzgk53bnrwf6yldoruw63q0\",\"operator\":\"CONTAINS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mrzxix3joa000000\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"idps_evt\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"nsx_idps_dst_ip\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mrzxix3joa000000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"nsx_idps_dst_ip\",\"preContext\":\"dest_ip\\\":\\\"\",\"postContext\":\"\\\"\\\\,\\\"dest_port\",\"regexValue\":\"\\\\d{1,3}\\\\.\\\\d{1,3}\\\\.\\\\d{1,3}\\\\.\\\\d{1,3}\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mrzxix3joa000000\",\"constraints\":null}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Top IDPS Signatures",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piepercentage\":false,\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611521277727,\"endTimeMillis\":1611524888824,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffzxhg6duozwxox3oon4hix3gnfzgk53bnrwf6yldoruw63q0\",\"operator\":\"CONTAINS\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onuwo3tbor2xezk7nfsa0000\",\"operator\":\"EXISTS\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"idps_evt\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"nsx_idps_signature_id\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onuwo3tbor2xezk7nfsa0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"nsx_idps_signature_id\",\"preContext\":\"signature_id\\\":\",\"postContext\":\"\\\\,\\\"rev\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427onuwo3tbor2xezk7nfsa0000\",\"constraints\":null}]}",
+          "messageQuery":""
+        }, {
+          "name":"IDPS Action",
+          "info":"",
+          "gridWidth":"1/2",
+          "chartType":"pie",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piepercentage\":true,\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1611521801218,\"endTimeMillis\":1611525412271,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"idps_evt\"},{\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mfrxi2lpny000000\",\"operator\":\"EXISTS\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"nsx_idps_action\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mfrxi2lpny000000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"nsx_idps_action\",\"preContext\":\"action\\\":\\\"\",\"postContext\":\"\\\"\\\\,\\\"gid\",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom5xhg6c7nfsha427mfrxi2lpny000000\",\"constraints\":null}]}",
+          "messageQuery":""
+        } ]
+      } ]
+    }, {
+      "name":"NSX - Rule Planner",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"TCP/UDP Rule Planner (Click Interactive Analysis and Search Rule ID)",
+          "info":"",
+          "gridWidth":"1",
+          "chartType":"number",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piepercentage\":false,\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"11256\",\"startTimeMillis\":1611953411805,\"endTimeMillis\":1612126211804,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"inet\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_src\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_firewall_dst\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_firewall_protocol\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3qojxxi33dn5wa0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_firewall_dst_port\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_dst\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |/|$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_protocol\",\"preContext\":\"(?:IN|OUT) (\\\\d+ )?\",\"postContext\":\"\\\\s\",\"regexValue\":\"(?:TCP6?|UDP6?|ICMP|PROTO6? \\\\d+)\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3qojxxi33dn5wa0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_src\",\"preContext\":\"\\\\S+\\\\s+\",\"postContext\":\"(?:/|->)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst_port\",\"preContext\":\"\\\\d+->[A-Fa-f\\\\d\\\\.:]+/\",\"postContext\":\"(?: |$)\",\"regexValue\":\"-?\\\\d+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2f64dpoj2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Non TCP/UDP Rule Planner (Click Interactive Analysis and Search Rule ID)",
+          "info":"",
+          "gridWidth":"1",
+          "chartType":"number",
+          "chartOptions":"{\"logaxis\":false,\"pielabelstyle\":\"legend\",\"piepercentage\":false,\"piestyle\":\"normal\"}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"10222\",\"startTimeMillis\":1608623926034,\"endTimeMillis\":1612126367221,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":false,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"inet\"}],\"supplementalConstraints\":[],\"groupByFields\":[{\"displayName\":\"vmw_nsxt_firewall_src\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_firewall_dst\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_firewall_protocol\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3qojxxi33dn5wa0000\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null},{\"displayName\":\"vmw_nsxt_firewall_action\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o\",\"displayNamespace\":\"Unknown\",\"numericGroupByType\":\"EACH_VALUE\",\"numericGroupByValue\":null}],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_firewall_action\",\"preContext\":\"match \",\"postContext\":\" \",\"regexValue\":\"\\\\w+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3bmn2gs33o\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_dst\",\"preContext\":\"\\\\d+->\",\"postContext\":\"(?: |/|$)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3eon2a0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_protocol\",\"preContext\":\"(?:IN|OUT) (\\\\d+ )?\",\"postContext\":\"\\\\s\",\"regexValue\":\"(?:TCP6?|UDP6?|ICMP|PROTO6? \\\\d+)\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3qojxxi33dn5wa0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"},{\"displayName\":\"vmw_nsxt_firewall_src\",\"preContext\":\"\\\\S+\\\\s+\",\"postContext\":\"(?:/|->)\",\"regexValue\":\"[A-Fa-f\\\\d\\\\.:]+\",\"internalName\":\"ibadcns7ozwxoltoon4hiltmn5two2lom53g2527nzzxq5c7mzuxezlxmfwgyx3tojrq0000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"INET\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      } ]
+    } ],
+    "header":""
+  } ],
+  "aliasFields":[ ],
+  "aliasRules":[ ],
+  "author":"",
+  "url":"",
+  "contentVersion":"1.0"
+}
