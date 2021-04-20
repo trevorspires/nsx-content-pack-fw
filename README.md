@@ -2,4 +2,4 @@
 
 This is the content pack assoocciated with video - https://youtu.be/qUjnCw9TJpc
 
-download the .vlcp file and upload too vrealize log insight
+download the .vlcp file and upload to vrealize log insight
